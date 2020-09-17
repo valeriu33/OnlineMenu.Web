@@ -1,0 +1,15 @@
+<h2>The Orders</h2>
+
+<ul>
+  <li *ngFor="let order of this.orders">
+    <div class="card">
+      <ul>
+        <li *ngFor="let item of order.products">
+          <span>{{ item.name }}</span>
+        </li>
+
+        <button (click)="completeOrder(order.id)">Done</button>
+      </ul>
+    </div>
+  </li>
+</ul>
